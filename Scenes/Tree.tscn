@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/tilesets/EnvObjects.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30, 5 )
+
+[node name="Tree" type="StaticBody2D"]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.75, -48.75 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 233.25, 41.63, 157, 253 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2, 6 )
+shape = SubResource( 1 )
